@@ -131,4 +131,4 @@ If you use or adapt this, please credit the original sources, and share what you
 ---
 
 ## Live LINK
-https://hariom57.github.io/GroundedProjectionThreeJS-httrack-FINAL-RealShadows/
+https://hariom57.github.io/realshadow-grounded-threejs/
