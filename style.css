@@ -1,0 +1,158 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #181c20;
+    color: #f2f2f2;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+#container, canvas {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 0;
+}
+
+#info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 95vw;
+    background: rgba(22, 22, 30, 0.85);
+    color: #fff;
+    padding: 18px 32px 14px 32px;
+    margin: 18px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    text-align: center;
+    font-size: 1.1em;
+    user-select: none;
+    pointer-events: auto;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+#info h2 {
+    margin: 8px 0 0 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #ffd700;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffb300;
+}
+
+button, input, select {
+    pointer-events: auto;
+}
+
+.lil-gui {
+    z-index: 20 !important;
+    font-size: 15px !important;
+    border-radius: 8px !important;
+    background: rgba(30, 30, 40, 0.98) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25) !important;
+    border: 1px solid #222 !important;
+}
+
+.lil-gui .title {
+    color: #ffd700 !important;
+}
+
+.lil-gui input[type="range"]::-webkit-slider-thumb {
+    background: #ffd700 !important;
+}
+
+#overlay {
+    position: absolute;
+    font-size: 18px;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+}
+
+#overlay button {
+    background: transparent;
+    border: 1px solid #ffd700;
+    border-radius: 4px;
+    color: #ffd700;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+#overlay button:hover {
+    background: #ffd700;
+    color: #222;
+}
+
+#notSupported {
+    width: 60%;
+    margin: 32px auto 0 auto;
+    background-color: #c62828;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    #info {
+        padding: 10px 10px 8px 10px;
+        font-size: 1em;
+    }
+    .lil-gui {
+        font-size: 13px !important;
+        max-width: 90vw !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .lil-gui.root {
+        right: auto !important;
+        top: auto !important;
+        max-height: 50%;
+        max-width: 96vw;
+        bottom: 0;
+        left: 0;
+        font-size: 12px !important;
+    }
+    #info {
+        max-width: 98vw;
+        padding: 8px 2vw 6px 2vw;
+        font-size: 0.97em;
+    }
+}
