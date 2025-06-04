@@ -96,6 +96,18 @@ I wanted to:
    - Or use VS Code Live Server
 4. Open `http://localhost:8000` in your browser.
 
+
+## Assets
+
+To run this project, place the required assets  in the `Assets/` folder as follows:
+
+- `Assets/textures/equirectangular/environmentTexture.hdr`
+- `Assets/models/gltf/car.glb`
+- etc.
+
+**Note:** The `Assets/` folder is excluded from version control to keep the repository lightweight.
+
+
 ---
 
 ## 📝 Credits & Attribution
