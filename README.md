@@ -127,3 +127,8 @@ EDIT: I have now added the essential assets after compressing them, so that the 
 This project started as a copy, but became my own through problem-solving, learning, and customization.  
 If you’re just starting out: it’s okay to copy, but always try to understand, explain, and improve what you build.  
 If you use or adapt this, please credit the original sources, and share what you learned too!
+
+---
+
+## Live LINK
+https://hariom57.github.io/GroundedProjectionThreeJS-httrack-FINAL-RealShadows/
