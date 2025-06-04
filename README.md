@@ -116,7 +116,7 @@ EDIT: I have now added the essential assets after compressing them, so that the 
 
 - **Three.js** ([threejs.org](https://threejs.org/))
 - **HDRI:** [Blouberg Sunrise 2](https://polyhaven.com/a/blouberg_sunrise_2) by [Greg Zaal](https://gregzaal.com/)
-- **Car model:** (credit the original author if known, or "Demo car model")
+- **Car model:** Ford Fusion [2006-2010]
 - **Inspiration:** [Three.js ground projected environment mapping example](https://threejs.org/examples/webgl_materials_envmaps_groundprojected.html)
 - **Thanks to:** The open source community and everyone who shares their code and knowledge.
 
@@ -127,3 +127,8 @@ EDIT: I have now added the essential assets after compressing them, so that the 
 This project started as a copy, but became my own through problem-solving, learning, and customization.  
 If you’re just starting out: it’s okay to copy, but always try to understand, explain, and improve what you build.  
 If you use or adapt this, please credit the original sources, and share what you learned too!
+
+---
+
+## Live LINK
+https://hariom57.github.io/realshadow-grounded-threejs/
