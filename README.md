@@ -107,6 +107,8 @@ To run this project, place the required assets  in the `Assets/` folder as follo
 
 **Note:** The `Assets/` folder is excluded from version control to keep the repository lightweight.
 
+EDIT: I have now added the essential assets after compressing them, so that the live link works
+
 
 ---
 
