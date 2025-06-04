@@ -6,6 +6,22 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';//if i'll use draco compression
 import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 
+//LOADER OVERLAY
+const loadingManager = new THREE.LoadingManager();
+
+loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
+  const percent = Math.round((itemsLoaded / itemsTotal) * 100);
+  document.getElementById('progress-bar').style.width = `${percent}%`;
+  document.getElementById('progress-percent').textContent = `${percent}%`;
+};
+
+loadingManager.onLoad = () => {
+  document.getElementById('loading-overlay').style.opacity = '0';
+  setTimeout(() => {
+    document.getElementById('loading-overlay').style.display = 'none';
+  }, 400);
+};
+
 // Parameters for GUI(initial wale)
 const params = {
     height: 15,
@@ -28,7 +44,7 @@ async function init() {
     scene = new THREE.Scene();
 
     // Environment map (HDR)
-    const hdrLoader = new RGBELoader();
+    const hdrLoader = new RGBELoader(loadingManager);
     const envMap = await hdrLoader.loadAsync('Assets/textures/equirectangular/environmentTexture.hdr');
     envMap.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -117,7 +133,7 @@ async function loadCarModel() {
     dracoLoader.setDecoderPath('jsm/libs/draco/gltf/');
 
     // GLTF loader
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(loadingManager);
     loader.setDRACOLoader(dracoLoader);
 
     // Materials
